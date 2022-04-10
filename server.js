@@ -11,6 +11,12 @@ app.get('/bar', function (req, res) {
   res.sendFile(path.join('/bar/build/index.html'), {root: __dirname });
 });
 
+app.use(express.static(__dirname + '/scatterplot/build'));
+app.get('/scatterplot', function (req, res) {
+  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0')
+  res.sendFile(path.join('/scatterplot/build/index.html'), {root: __dirname });
+});
+
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`)
 })
