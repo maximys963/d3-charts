@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    font-family: Inter, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 42px;
+    color: #2a2929;
+}
+
+.subtitle {
+    margin-top: 24px;
+    font-size: 18px;
+    color: #2a2929;
+}
+
+.dot {
+    opacity: 0.6;
+    stroke: black
+}
+
+.legend_text {
+    font-size: 10px;
+}
+
+.tooltip-text {
+    font-size: 14px;
+}

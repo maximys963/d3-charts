@@ -1,4 +1,5 @@
 /node_modules
 /bar/node_modules
+/choropleth/node_modules
 /scatterplot/node_modules
 /heatmap/node_modules
