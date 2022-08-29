@@ -32,3 +32,13 @@ app.get('/choropleth', function (req, res) {
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`)
 })
+
+app.use(express.static(__dirname + '/treemap/build'));
+app.get('/choropleth', function (req, res) {
+  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0')
+  res.sendFile(path.join('/treemap/build/index.html'), {root: __dirname });
+});
+
+app.listen(port, () => {
+  console.log(`App listening at http://localhost:${port}`)
+})
